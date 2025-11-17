@@ -1,0 +1,78 @@
+.shell {
+  min-height: 100vh;
+  background: var(--base-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.stack {
+  width: min(420px, 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--base-text);
+  letter-spacing: -0.01em;
+}
+
+.backButton {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 999px;
+  background: #ffffff;
+  padding: 0.65rem 1.2rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--base-blue);
+  align-self: center;
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(6, 8, 12, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.modalCard {
+  width: min(360px, 100%);
+  text-align: center;
+  padding: 2.25rem 2rem;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modalBadge {
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--base-muted);
+}
+
+.modalTitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--base-text);
+}
+
+.modalBody {
+  font-size: 0.95rem;
+  color: var(--base-muted);
+  line-height: 1.5;
+}
+
+

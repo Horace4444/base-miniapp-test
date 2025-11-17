@@ -1,0 +1,130 @@
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #171717;
+    --base-blue: #0052ff;
+    --base-bg: #ffffff;
+    --base-text: #0a0b0d;
+    --base-muted: #6b7280;
+    --base-surface: #f4f5f7;
+    --base-border: #e0e4eb;
+    --base-radius-lg: 16px;
+    --base-radius-xl: 24px;
+    --base-shadow-soft: 0 18px 45px rgba(10, 14, 30, 0.08);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: #0a0a0a;
+      --foreground: #ededed;
+    }
+  }
+
+  html,
+  body {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: var(--font-inter), sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: var(--base-text);
+    background: var(--base-bg);
+  }
+
+  code {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-family: var(--font-source-code-pro), monospace;
+    font-size: 0.875rem;
+    padding: 0.25rem 0.5rem calc(0.25rem + 2px);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    code {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .bg-base-body {
+    background-color: var(--base-bg);
+  }
+
+  .text-base-text {
+    color: var(--base-text);
+  }
+
+  .text-base-muted {
+    color: var(--base-muted);
+  }
+
+  .card {
+    background-color: #ffffff;
+    border-radius: var(--base-radius-xl);
+    box-shadow: var(--base-shadow-soft);
+    border: 1px solid var(--base-border);
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    border: none;
+    border-radius: 999px;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--base-blue);
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    cursor: pointer;
+  }
+
+  .pulse-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background-color: var(--base-blue);
+    animation: pulse 1.2s infinite ease-in-out;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(0.9);
+      opacity: 0.4;
+    }
+
+    50% {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    100% {
+      transform: scale(0.9);
+      opacity: 0.4;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    html {
+      color-scheme: dark;
+    }
+  }
+}

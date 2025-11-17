@@ -1,0 +1,74 @@
+.shell {
+  min-height: 100vh;
+  background: var(--base-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.25rem;
+}
+
+.card {
+  width: min(360px, 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  padding: 2.5rem 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--base-text);
+}
+
+.label {
+  font-size: 0.85rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--base-muted);
+}
+
+.qrFrame {
+  padding: 1rem;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  background: #ffffff;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+.qrImage {
+  display: block;
+  width: 220px;
+  height: 220px;
+}
+
+.qrSkeleton {
+  width: 220px;
+  height: 220px;
+  border-radius: 16px;
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(10, 11, 13, 0.08),
+    rgba(10, 11, 13, 0.08) 10px,
+    rgba(10, 11, 13, 0.02) 10px,
+    rgba(10, 11, 13, 0.02) 20px
+  );
+  animation: pulse 1.2s infinite ease-in-out;
+}
+
+.button {
+  margin-top: 0.5rem;
+  width: 100%;
+  border: none;
+  border-radius: 999px;
+  background: var(--base-blue);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.9rem 1.2rem;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+}
